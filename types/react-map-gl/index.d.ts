@@ -413,3 +413,12 @@ export interface SVGOverlayProps extends BaseControlProps {
 }
 
 export class SVGOverlay extends BaseControl<SVGOverlayProps, Element> {}
+
+export interface SourceProps {
+    id?: string
+    type: string
+}
+
+export class Source<T extends SourceProps, S extends Element> extends React.PureComponent<T> {
+    getSource(): T;
+}
